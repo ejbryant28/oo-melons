@@ -57,3 +57,14 @@ class InternationalMelonOrder(AbstractMelonOrder):
 
         return total
 
+class GovernmentMelonOrder(AbstractMelonOrder):
+    """A melon order from the U.S. Governemt, inherits from AbstractMelonOrder"""
+
+    tax = 0
+    passed_inspection = False
+
+    def marked_inspection(self, passed):
+        """Update the attribute of passed_inspection to be true"""
+
+        self.passed_inspection = passed
+
